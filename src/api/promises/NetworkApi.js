@@ -66,7 +66,7 @@ export default class NetworkApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = NetworkListResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/network/list', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -113,7 +113,7 @@ export default class NetworkApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = NetworkOptionsResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/network/options', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -160,7 +160,7 @@ export default class NetworkApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = NetworkStatusResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/network/status', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null

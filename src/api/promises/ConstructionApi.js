@@ -76,7 +76,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionCombineResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/combine', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -123,7 +123,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionDeriveResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/derive', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -170,7 +170,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TransactionIdentifierResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/hash', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -217,7 +217,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionMetadataResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -264,7 +264,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionParseResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/parse', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -311,7 +311,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionPayloadsResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/payloads', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -358,7 +358,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ConstructionPreprocessResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/preprocess', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -405,7 +405,7 @@ export default class ConstructionApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TransactionIdentifierResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/construction/submit', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null

@@ -65,7 +65,7 @@ export default class BlockApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = BlockResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -112,7 +112,7 @@ export default class BlockApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = BlockTransactionResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/block/transaction', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null

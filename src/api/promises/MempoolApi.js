@@ -65,7 +65,7 @@ export default class MempoolApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = MempoolResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/mempool', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
@@ -112,7 +112,7 @@ export default class MempoolApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = MempoolTransactionResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/mempool/transaction', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null

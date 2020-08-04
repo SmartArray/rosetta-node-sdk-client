@@ -63,7 +63,7 @@ export default class AccountApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AccountBalanceResponse;
-      return this.apiClient.callApi(
+      return this.apiClient.callApiPromised(
         '/account/balance', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
