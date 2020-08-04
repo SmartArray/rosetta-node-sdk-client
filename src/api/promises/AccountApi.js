@@ -12,10 +12,10 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AccountBalanceRequest from '../model/AccountBalanceRequest';
-import AccountBalanceResponse from '../model/AccountBalanceResponse';
-import Error from '../model/Error';
+import ApiClient from "../../ApiClient";
+import AccountBalanceRequest from '../../model/AccountBalanceRequest';
+import AccountBalanceResponse from '../../model/AccountBalanceResponse';
+import Error from '../../model/Error';
 
 /**
 * Account service.

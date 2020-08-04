@@ -12,12 +12,12 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import Error from '../model/Error';
-import MempoolResponse from '../model/MempoolResponse';
-import MempoolTransactionRequest from '../model/MempoolTransactionRequest';
-import MempoolTransactionResponse from '../model/MempoolTransactionResponse';
-import NetworkRequest from '../model/NetworkRequest';
+import ApiClient from "../../ApiClient";
+import Error from '../../model/Error';
+import MempoolResponse from '../../model/MempoolResponse';
+import MempoolTransactionRequest from '../../model/MempoolTransactionRequest';
+import MempoolTransactionResponse from '../../model/MempoolTransactionResponse';
+import NetworkRequest from '../../model/NetworkRequest';
 
 /**
 * Mempool service.

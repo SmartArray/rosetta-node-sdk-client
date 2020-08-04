@@ -12,13 +12,13 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import Error from '../model/Error';
-import MetadataRequest from '../model/MetadataRequest';
-import NetworkListResponse from '../model/NetworkListResponse';
-import NetworkOptionsResponse from '../model/NetworkOptionsResponse';
-import NetworkRequest from '../model/NetworkRequest';
-import NetworkStatusResponse from '../model/NetworkStatusResponse';
+import ApiClient from "../../ApiClient";
+import Error from '../../model/Error';
+import MetadataRequest from '../../model/MetadataRequest';
+import NetworkListResponse from '../../model/NetworkListResponse';
+import NetworkOptionsResponse from '../../model/NetworkOptionsResponse';
+import NetworkRequest from '../../model/NetworkRequest';
+import NetworkStatusResponse from '../../model/NetworkStatusResponse';
 
 /**
 * Network service.

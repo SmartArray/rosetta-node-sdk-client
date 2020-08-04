@@ -12,23 +12,23 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import ConstructionCombineRequest from '../model/ConstructionCombineRequest';
-import ConstructionCombineResponse from '../model/ConstructionCombineResponse';
-import ConstructionDeriveRequest from '../model/ConstructionDeriveRequest';
-import ConstructionDeriveResponse from '../model/ConstructionDeriveResponse';
-import ConstructionHashRequest from '../model/ConstructionHashRequest';
-import ConstructionMetadataRequest from '../model/ConstructionMetadataRequest';
-import ConstructionMetadataResponse from '../model/ConstructionMetadataResponse';
-import ConstructionParseRequest from '../model/ConstructionParseRequest';
-import ConstructionParseResponse from '../model/ConstructionParseResponse';
-import ConstructionPayloadsRequest from '../model/ConstructionPayloadsRequest';
-import ConstructionPayloadsResponse from '../model/ConstructionPayloadsResponse';
-import ConstructionPreprocessRequest from '../model/ConstructionPreprocessRequest';
-import ConstructionPreprocessResponse from '../model/ConstructionPreprocessResponse';
-import ConstructionSubmitRequest from '../model/ConstructionSubmitRequest';
-import Error from '../model/Error';
-import TransactionIdentifierResponse from '../model/TransactionIdentifierResponse';
+import ApiClient from "../../ApiClient";
+import ConstructionCombineRequest from '../../model/ConstructionCombineRequest';
+import ConstructionCombineResponse from '../../model/ConstructionCombineResponse';
+import ConstructionDeriveRequest from '../../model/ConstructionDeriveRequest';
+import ConstructionDeriveResponse from '../../model/ConstructionDeriveResponse';
+import ConstructionHashRequest from '../../model/ConstructionHashRequest';
+import ConstructionMetadataRequest from '../../model/ConstructionMetadataRequest';
+import ConstructionMetadataResponse from '../../model/ConstructionMetadataResponse';
+import ConstructionParseRequest from '../../model/ConstructionParseRequest';
+import ConstructionParseResponse from '../../model/ConstructionParseResponse';
+import ConstructionPayloadsRequest from '../../model/ConstructionPayloadsRequest';
+import ConstructionPayloadsResponse from '../../model/ConstructionPayloadsResponse';
+import ConstructionPreprocessRequest from '../../model/ConstructionPreprocessRequest';
+import ConstructionPreprocessResponse from '../../model/ConstructionPreprocessResponse';
+import ConstructionSubmitRequest from '../../model/ConstructionSubmitRequest';
+import Error from '../../model/Error';
+import TransactionIdentifierResponse from '../../model/TransactionIdentifierResponse';
 
 /**
 * Construction service.

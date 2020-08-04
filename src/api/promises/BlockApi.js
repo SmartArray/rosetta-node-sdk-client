@@ -12,12 +12,12 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import BlockRequest from '../model/BlockRequest';
-import BlockResponse from '../model/BlockResponse';
-import BlockTransactionRequest from '../model/BlockTransactionRequest';
-import BlockTransactionResponse from '../model/BlockTransactionResponse';
-import Error from '../model/Error';
+import ApiClient from "../../ApiClient";
+import BlockRequest from '../../model/BlockRequest';
+import BlockResponse from '../../model/BlockResponse';
+import BlockTransactionRequest from '../../model/BlockTransactionRequest';
+import BlockTransactionResponse from '../../model/BlockTransactionResponse';
+import Error from '../../model/Error';
 
 /**
 * Block service.
