@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get List of Available Networks
 
-This endpoint returns a list of NetworkIdentifiers that the Rosetta server can handle.
+This endpoint returns a list of NetworkIdentifiers that the Rosetta server supports.
 
 ### Example
 
@@ -61,7 +61,7 @@ No authorization required
 
 Get Network Options
 
-This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here.  Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
+This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here. Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
 
 ### Example
 

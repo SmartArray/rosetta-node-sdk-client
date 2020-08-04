@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## mempool
 
-> MempoolResponse mempool(mempoolRequest)
+> MempoolResponse mempool(networkRequest)
 
 Get All Mempool Transactions
 
@@ -23,8 +23,8 @@ Get all Transaction Identifiers in the mempool
 import Rosetta from 'rosetta';
 
 let apiInstance = new Rosetta.MempoolApi();
-let mempoolRequest = new Rosetta.MempoolRequest(); // MempoolRequest | 
-apiInstance.mempool(mempoolRequest, (error, data, response) => {
+let networkRequest = new Rosetta.NetworkRequest(); // NetworkRequest | 
+apiInstance.mempool(networkRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -38,7 +38,7 @@ apiInstance.mempool(mempoolRequest, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mempoolRequest** | [**MempoolRequest**](MempoolRequest.md)|  | 
+ **networkRequest** | [**NetworkRequest**](NetworkRequest.md)|  | 
 
 ### Return type
 
@@ -60,7 +60,7 @@ No authorization required
 
 Get a Mempool Transaction
 
-Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block.  Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
+Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block. Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
 
 ### Example
 
