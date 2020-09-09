@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OperationStatus model module.
  * @module model/OperationStatus
- * @version 1.3.1
+ * @version 1.4.1
  */
 var OperationStatus = /*#__PURE__*/function () {
   /**
@@ -26,7 +26,7 @@ var OperationStatus = /*#__PURE__*/function () {
    * OperationStatus is utilized to indicate which Operation status are considered successful.
    * @alias module:model/OperationStatus
    * @param status {String} The status is the network-specific status of the operation.
-   * @param successful {Boolean} An Operation is considered successful if the Operation.Amount should affect the Operation.Account. Some blockchains (like Bitcoin) only include successful operations in blocks but other blockchains (like Ethereum) include unsuccessful operations that incur a fee.  To reconcile the computed balance from the stream of Operations, it is critical to understand which Operation.Status indicate an Operation is successful and should affect an Account.
+   * @param successful {Boolean} An Operation is considered successful if the Operation.Amount should affect the Operation.Account. Some blockchains (like Bitcoin) only include successful operations in blocks but other blockchains (like Ethereum) include unsuccessful operations that incur a fee. To reconcile the computed balance from the stream of Operations, it is critical to understand which Operation.Status indicate an Operation is successful and should affect an Account.
    */
   function OperationStatus(status, successful) {
     _classCallCheck(this, OperationStatus);
@@ -83,7 +83,7 @@ var OperationStatus = /*#__PURE__*/function () {
 
 OperationStatus.prototype['status'] = undefined;
 /**
- * An Operation is considered successful if the Operation.Amount should affect the Operation.Account. Some blockchains (like Bitcoin) only include successful operations in blocks but other blockchains (like Ethereum) include unsuccessful operations that incur a fee.  To reconcile the computed balance from the stream of Operations, it is critical to understand which Operation.Status indicate an Operation is successful and should affect an Account.
+ * An Operation is considered successful if the Operation.Amount should affect the Operation.Account. Some blockchains (like Bitcoin) only include successful operations in blocks but other blockchains (like Ethereum) include unsuccessful operations that incur a fee. To reconcile the computed balance from the stream of Operations, it is critical to understand which Operation.Status indicate an Operation is successful and should affect an Account.
  * @member {Boolean} successful
  */
 

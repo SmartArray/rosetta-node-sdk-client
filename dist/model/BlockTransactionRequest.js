@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockTransactionRequest model module.
  * @module model/BlockTransactionRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var BlockTransactionRequest = /*#__PURE__*/function () {
   /**

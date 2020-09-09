@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The NetworkOptionsResponse model module.
  * @module model/NetworkOptionsResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var NetworkOptionsResponse = /*#__PURE__*/function () {
   /**

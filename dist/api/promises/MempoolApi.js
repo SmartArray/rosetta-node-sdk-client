@@ -9,13 +9,13 @@ var _ApiClient = _interopRequireDefault(require("../../ApiClient"));
 
 var _Error = _interopRequireDefault(require("../../model/Error"));
 
-var _MempoolRequest = _interopRequireDefault(require("../../model/MempoolRequest"));
-
 var _MempoolResponse = _interopRequireDefault(require("../../model/MempoolResponse"));
 
 var _MempoolTransactionRequest = _interopRequireDefault(require("../../model/MempoolTransactionRequest"));
 
 var _MempoolTransactionResponse = _interopRequireDefault(require("../../model/MempoolTransactionResponse"));
+
+var _NetworkRequest = _interopRequireDefault(require("../../model/NetworkRequest"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Mempool service.
 * @module api/MempoolApi
-* @version 1.3.1
+* @version 1.4.1
 */
 var MempoolApi = /*#__PURE__*/function () {
   /**
@@ -46,18 +46,18 @@ var MempoolApi = /*#__PURE__*/function () {
   /**
    * Get All Mempool Transactions
    * Get all Transaction Identifiers in the mempool
-   * @param {module:model/MempoolRequest} mempoolRequest 
+   * @param {module:model/NetworkRequest} networkRequest 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MempoolResponse} and HTTP response
    */
 
 
   _createClass(MempoolApi, [{
     key: "mempoolWithHttpInfo",
-    value: function mempoolWithHttpInfo(mempoolRequest) {
-      var postBody = mempoolRequest; // verify the required parameter 'mempoolRequest' is set
+    value: function mempoolWithHttpInfo(networkRequest) {
+      var postBody = networkRequest; // verify the required parameter 'networkRequest' is set
 
-      if (mempoolRequest === undefined || mempoolRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'mempoolRequest' when calling mempool");
+      if (networkRequest === undefined || networkRequest === null) {
+        throw new _Error["default"]("Missing the required parameter 'networkRequest' when calling mempool");
       }
 
       var pathParams = {};
@@ -73,20 +73,20 @@ var MempoolApi = /*#__PURE__*/function () {
     /**
      * Get All Mempool Transactions
      * Get all Transaction Identifiers in the mempool
-     * @param {module:model/MempoolRequest} mempoolRequest 
+     * @param {module:model/NetworkRequest} networkRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MempoolResponse}
      */
 
   }, {
     key: "mempool",
-    value: function mempool(mempoolRequest) {
-      return this.mempoolWithHttpInfo(mempoolRequest).then(function (response_and_data) {
+    value: function mempool(networkRequest) {
+      return this.mempoolWithHttpInfo(networkRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Get a Mempool Transaction
-     * Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block.  Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
+     * Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block. Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
      * @param {module:model/MempoolTransactionRequest} mempoolTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MempoolTransactionResponse} and HTTP response
      */
@@ -112,7 +112,7 @@ var MempoolApi = /*#__PURE__*/function () {
     }
     /**
      * Get a Mempool Transaction
-     * Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block.  Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
+     * Get a transaction in the mempool by its Transaction Identifier. This is a separate request than fetching a block transaction (/block/transaction) because some blockchain nodes need to know that a transaction query is for something in the mempool instead of a transaction in a block. Transactions may not be fully parsable until they are in a block (ex: may not be possible to determine the fee to pay before a transaction is executed). On this endpoint, it is ok that returned transactions are only estimates of what may actually be included in a block.
      * @param {module:model/MempoolTransactionRequest} mempoolTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MempoolTransactionResponse}
      */

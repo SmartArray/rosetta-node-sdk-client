@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountBalanceRequest model module.
  * @module model/AccountBalanceRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var AccountBalanceRequest = /*#__PURE__*/function () {
   /**

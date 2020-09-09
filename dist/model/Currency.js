@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Currency model module.
  * @module model/Currency
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Currency = /*#__PURE__*/function () {
   /**
@@ -26,7 +26,7 @@ var Currency = /*#__PURE__*/function () {
    * Currency is composed of a canonical Symbol and Decimals. This Decimals value is used to convert an Amount.Value from atomic units (Satoshis) to standard units (Bitcoins).
    * @alias module:model/Currency
    * @param symbol {String} Canonical symbol associated with a currency.
-   * @param decimals {Number} Number of decimal places in the standard unit representation of the amount.  For example, BTC has 8 decimals. Note that it is not possible to represent the value of some currency in atomic units that is not base 10.
+   * @param decimals {Number} Number of decimal places in the standard unit representation of the amount. For example, BTC has 8 decimals. Note that it is not possible to represent the value of some currency in atomic units that is not base 10.
    */
   function Currency(symbol, decimals) {
     _classCallCheck(this, Currency);
@@ -87,13 +87,13 @@ var Currency = /*#__PURE__*/function () {
 
 Currency.prototype['symbol'] = undefined;
 /**
- * Number of decimal places in the standard unit representation of the amount.  For example, BTC has 8 decimals. Note that it is not possible to represent the value of some currency in atomic units that is not base 10.
+ * Number of decimal places in the standard unit representation of the amount. For example, BTC has 8 decimals. Note that it is not possible to represent the value of some currency in atomic units that is not base 10.
  * @member {Number} decimals
  */
 
 Currency.prototype['decimals'] = undefined;
 /**
- * Any additional information related to the currency itself.  For example, it would be useful to populate this object with the contract address of an ERC-20 token.
+ * Any additional information related to the currency itself. For example, it would be useful to populate this object with the contract address of an ERC-20 token.
  * @member {Object} metadata
  */
 

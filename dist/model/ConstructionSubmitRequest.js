@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConstructionSubmitRequest model module.
  * @module model/ConstructionSubmitRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var ConstructionSubmitRequest = /*#__PURE__*/function () {
   /**

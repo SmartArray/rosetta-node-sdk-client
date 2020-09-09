@@ -20,14 +20,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Amount model module.
  * @module model/Amount
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Amount = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Amount</code>.
    * Amount is some Value of a Currency. It is considered invalid to specify a Value without a Currency.
    * @alias module:model/Amount
-   * @param value {String} Value of the transaction in atomic units represented as an arbitrary-sized signed integer.  For example, 1 BTC would be represented by a value of 100000000.
+   * @param value {String} Value of the transaction in atomic units represented as an arbitrary-sized signed integer. For example, 1 BTC would be represented by a value of 100000000.
    * @param currency {module:model/Currency} 
    */
   function Amount(value, currency) {
@@ -82,7 +82,7 @@ var Amount = /*#__PURE__*/function () {
   return Amount;
 }();
 /**
- * Value of the transaction in atomic units represented as an arbitrary-sized signed integer.  For example, 1 BTC would be represented by a value of 100000000.
+ * Value of the transaction in atomic units represented as an arbitrary-sized signed integer. For example, 1 BTC would be represented by a value of 100000000.
  * @member {String} value
  */
 

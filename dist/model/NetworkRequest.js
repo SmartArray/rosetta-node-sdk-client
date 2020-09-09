@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The NetworkRequest model module.
  * @module model/NetworkRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var NetworkRequest = /*#__PURE__*/function () {
   /**

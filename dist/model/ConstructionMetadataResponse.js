@@ -18,12 +18,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConstructionMetadataResponse model module.
  * @module model/ConstructionMetadataResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var ConstructionMetadataResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ConstructionMetadataResponse</code>.
-   * The ConstructionMetadataResponse returns network-specific metadata used for transaction construction. It is likely that the client will not inspect this metadata before passing it to a client SDK that uses it for construction.
+   * The ConstructionMetadataResponse returns network-specific metadata used for transaction construction.
    * @alias module:model/ConstructionMetadataResponse
    * @param metadata {Object} 
    */

@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Transaction model module.
  * @module model/Transaction
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Transaction = /*#__PURE__*/function () {
   /**
@@ -95,7 +95,7 @@ Transaction.prototype['transaction_identifier'] = undefined;
 
 Transaction.prototype['operations'] = undefined;
 /**
- * Transactions that are related to other transactions (like a cross-shard transactioin) should include the tranaction_identifier of these transactions in the metadata.
+ * Transactions that are related to other transactions (like a cross-shard transaction) should include the tranaction_identifier of these transactions in the metadata.
  * @member {Object} metadata
  */
 

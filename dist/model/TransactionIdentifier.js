@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TransactionIdentifier model module.
  * @module model/TransactionIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var TransactionIdentifier = /*#__PURE__*/function () {
   /**

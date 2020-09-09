@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConstructionMetadataRequest model module.
  * @module model/ConstructionMetadataRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var ConstructionMetadataRequest = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The NetworkListResponse model module.
  * @module model/NetworkListResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var NetworkListResponse = /*#__PURE__*/function () {
   /**

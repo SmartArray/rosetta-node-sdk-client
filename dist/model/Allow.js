@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Allow model module.
  * @module model/Allow
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Allow = /*#__PURE__*/function () {
   /**
@@ -32,11 +32,12 @@ var Allow = /*#__PURE__*/function () {
    * @param operationStatuses {Array.<module:model/OperationStatus>} All Operation.Status this implementation supports. Any status that is returned during parsing that is not listed here will cause client validation to error.
    * @param operationTypes {Array.<String>} All Operation.Type this implementation supports. Any type that is returned during parsing that is not listed here will cause client validation to error.
    * @param errors {Array.<module:model/Error>} All Errors that this implementation could return. Any error that is returned during parsing that is not listed here will cause client validation to error.
+   * @param historicalBalanceLookup {Boolean} Any Rosetta implementation that supports querying the balance of an account at any height in the past should set this to true.
    */
-  function Allow(operationStatuses, operationTypes, errors) {
+  function Allow(operationStatuses, operationTypes, errors, historicalBalanceLookup) {
     _classCallCheck(this, Allow);
 
-    Allow.initialize(this, operationStatuses, operationTypes, errors);
+    Allow.initialize(this, operationStatuses, operationTypes, errors, historicalBalanceLookup);
   }
   /**
    * Initializes the fields of this object.
@@ -47,10 +48,11 @@ var Allow = /*#__PURE__*/function () {
 
   _createClass(Allow, null, [{
     key: "initialize",
-    value: function initialize(obj, operationStatuses, operationTypes, errors) {
+    value: function initialize(obj, operationStatuses, operationTypes, errors, historicalBalanceLookup) {
       obj['operation_statuses'] = operationStatuses;
       obj['operation_types'] = operationTypes;
       obj['errors'] = errors;
+      obj['historical_balance_lookup'] = historicalBalanceLookup;
     }
     /**
      * Constructs a <code>Allow</code> from a plain JavaScript object, optionally creating a new instance.
@@ -76,6 +78,10 @@ var Allow = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('errors')) {
           obj['errors'] = _ApiClient["default"].convertToType(data['errors'], [_Error["default"]]);
+        }
+
+        if (data.hasOwnProperty('historical_balance_lookup')) {
+          obj['historical_balance_lookup'] = _ApiClient["default"].convertToType(data['historical_balance_lookup'], 'Boolean');
         }
       }
 
@@ -104,5 +110,11 @@ Allow.prototype['operation_types'] = undefined;
  */
 
 Allow.prototype['errors'] = undefined;
+/**
+ * Any Rosetta implementation that supports querying the balance of an account at any height in the past should set this to true.
+ * @member {Boolean} historical_balance_lookup
+ */
+
+Allow.prototype['historical_balance_lookup'] = undefined;
 var _default = Allow;
 exports["default"] = _default;

@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Network service.
 * @module api/NetworkApi
-* @version 1.3.1
+* @version 1.4.1
 */
 var NetworkApi = /*#__PURE__*/function () {
   /**
@@ -47,7 +47,7 @@ var NetworkApi = /*#__PURE__*/function () {
   }
   /**
    * Get List of Available Networks
-   * This endpoint returns a list of NetworkIdentifiers that the Rosetta server can handle.
+   * This endpoint returns a list of NetworkIdentifiers that the Rosetta server supports.
    * @param {module:model/MetadataRequest} metadataRequest 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NetworkListResponse} and HTTP response
    */
@@ -74,7 +74,7 @@ var NetworkApi = /*#__PURE__*/function () {
     }
     /**
      * Get List of Available Networks
-     * This endpoint returns a list of NetworkIdentifiers that the Rosetta server can handle.
+     * This endpoint returns a list of NetworkIdentifiers that the Rosetta server supports.
      * @param {module:model/MetadataRequest} metadataRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/NetworkListResponse}
      */
@@ -88,7 +88,7 @@ var NetworkApi = /*#__PURE__*/function () {
     }
     /**
      * Get Network Options
-     * This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here.  Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
+     * This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here. Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
      * @param {module:model/NetworkRequest} networkRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NetworkOptionsResponse} and HTTP response
      */
@@ -114,7 +114,7 @@ var NetworkApi = /*#__PURE__*/function () {
     }
     /**
      * Get Network Options
-     * This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here.  Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
+     * This endpoint returns the version information and allowed network-specific types for a NetworkIdentifier. Any NetworkIdentifier returned by /network/list should be accessible here. Because options are retrievable in the context of a NetworkIdentifier, it is possible to define unique options for each network.
      * @param {module:model/NetworkRequest} networkRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/NetworkOptionsResponse}
      */

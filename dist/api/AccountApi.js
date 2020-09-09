@@ -13,8 +13,6 @@ var _AccountBalanceResponse = _interopRequireDefault(require("../model/AccountBa
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _promisify = _interopRequireDefault(require("../promisify"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Account service.
 * @module api/AccountApi
-* @version 1.3.1
+* @version 1.4.1
 */
 var AccountApi = /*#__PURE__*/function () {
   /**
@@ -40,7 +38,6 @@ var AccountApi = /*#__PURE__*/function () {
     _classCallCheck(this, AccountApi);
 
     this.apiClient = apiClient || _ApiClient["default"].instance;
-    (0, _promisify["default"])(this, ['accountBalance']);
   }
   /**
    * Callback function to receive the result of the accountBalance operation.
@@ -52,7 +49,7 @@ var AccountApi = /*#__PURE__*/function () {
 
   /**
    * Get an Account Balance
-   * Get an array of all Account Balances for an Account Identifier and the Block Identifier at which the balance lookup was performed.  Some consumers of account balance data need to know at which block the balance was calculated to reconcile account balance changes.  To get all balances associated with an account, it may be necessary to perform multiple balance requests with unique Account Identifiers.  If the client supports it, passing nil AccountIdentifier metadata to the request should fetch all balances (if applicable).  It is also possible to perform a historical balance lookup (if the server supports it) by passing in an optional BlockIdentifier.
+   * Get an array of all AccountBalances for an AccountIdentifier and the BlockIdentifier at which the balance lookup was performed. The BlockIdentifier must always be returned because some consumers of account balance data need to know specifically at which block the balance was calculated to compare balances they compute from operations with the balance returned by the node. It is important to note that making a balance request for an account without populating the SubAccountIdentifier should not result in the balance of all possible SubAccountIdentifiers being returned. Rather, it should result in the balance pertaining to no SubAccountIdentifiers being returned (sometimes called the liquid balance). To get all balances associated with an account, it may be necessary to perform multiple balance requests with unique AccountIdentifiers. It is also possible to perform a historical balance lookup (if the server supports it) by passing in an optional BlockIdentifier.
    * @param {module:model/AccountBalanceRequest} accountBalanceRequest 
    * @param {module:api/AccountApi~accountBalanceCallback} callback The callback function, accepting three arguments: error, data, response
    * data is of type: {@link module:model/AccountBalanceResponse}

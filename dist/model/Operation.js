@@ -11,6 +11,8 @@ var _AccountIdentifier = _interopRequireDefault(require("./AccountIdentifier"));
 
 var _Amount = _interopRequireDefault(require("./Amount"));
 
+var _CoinChange = _interopRequireDefault(require("./CoinChange"));
+
 var _OperationIdentifier = _interopRequireDefault(require("./OperationIdentifier"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -24,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Operation model module.
  * @module model/Operation
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Operation = /*#__PURE__*/function () {
   /**
@@ -32,8 +34,8 @@ var Operation = /*#__PURE__*/function () {
    * Operations contain all balance-changing information within a transaction. They are always one-sided (only affect 1 AccountIdentifier) and can succeed or fail independently from a Transaction.
    * @alias module:model/Operation
    * @param operationIdentifier {module:model/OperationIdentifier} 
-   * @param type {String} The network-specific type of the operation. Ensure that any type that can be returned here is also specified in the NetowrkStatus. This can be very useful to downstream consumers that parse all block data.
-   * @param status {String} The network-specific status of the operation. Status is not defined on the transaction object because blockchains with smart contracts may have transactions that partially apply.  Blockchains with atomic transactions (all operations succeed or all operations fail) will have the same status for each operation.
+   * @param type {String} The network-specific type of the operation. Ensure that any type that can be returned here is also specified in the NetworkStatus. This can be very useful to downstream consumers that parse all block data.
+   * @param status {String} The network-specific status of the operation. Status is not defined on the transaction object because blockchains with smart contracts may have transactions that partially apply. Blockchains with atomic transactions (all operations succeed or all operations fail) will have the same status for each operation.
    */
   function Operation(operationIdentifier, type, status) {
     _classCallCheck(this, Operation);
@@ -92,6 +94,10 @@ var Operation = /*#__PURE__*/function () {
           obj['amount'] = _Amount["default"].constructFromObject(data['amount']);
         }
 
+        if (data.hasOwnProperty('coin_change')) {
+          obj['coin_change'] = _CoinChange["default"].constructFromObject(data['coin_change']);
+        }
+
         if (data.hasOwnProperty('metadata')) {
           obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
@@ -110,19 +116,19 @@ var Operation = /*#__PURE__*/function () {
 
 Operation.prototype['operation_identifier'] = undefined;
 /**
- * Restrict referenced related_operations to identifier indexes < the current operation_identifier.index. This ensures there exists a clear DAG-structure of relations.  Since operations are one-sided, one could imagine relating operations in a single transfer or linking operations in a call tree.
+ * Restrict referenced related_operations to identifier indexes < the current operation_identifier.index. This ensures there exists a clear DAG-structure of relations. Since operations are one-sided, one could imagine relating operations in a single transfer or linking operations in a call tree.
  * @member {Array.<module:model/OperationIdentifier>} related_operations
  */
 
 Operation.prototype['related_operations'] = undefined;
 /**
- * The network-specific type of the operation. Ensure that any type that can be returned here is also specified in the NetowrkStatus. This can be very useful to downstream consumers that parse all block data.
+ * The network-specific type of the operation. Ensure that any type that can be returned here is also specified in the NetworkStatus. This can be very useful to downstream consumers that parse all block data.
  * @member {String} type
  */
 
 Operation.prototype['type'] = undefined;
 /**
- * The network-specific status of the operation. Status is not defined on the transaction object because blockchains with smart contracts may have transactions that partially apply.  Blockchains with atomic transactions (all operations succeed or all operations fail) will have the same status for each operation.
+ * The network-specific status of the operation. Status is not defined on the transaction object because blockchains with smart contracts may have transactions that partially apply. Blockchains with atomic transactions (all operations succeed or all operations fail) will have the same status for each operation.
  * @member {String} status
  */
 
@@ -137,6 +143,11 @@ Operation.prototype['account'] = undefined;
  */
 
 Operation.prototype['amount'] = undefined;
+/**
+ * @member {module:model/CoinChange} coin_change
+ */
+
+Operation.prototype['coin_change'] = undefined;
 /**
  * @member {Object} metadata
  */

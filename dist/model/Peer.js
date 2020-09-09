@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Peer model module.
  * @module model/Peer
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Peer = /*#__PURE__*/function () {
   /**

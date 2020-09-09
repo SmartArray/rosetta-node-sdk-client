@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PartialBlockIdentifier model module.
  * @module model/PartialBlockIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var PartialBlockIdentifier = /*#__PURE__*/function () {
   /**

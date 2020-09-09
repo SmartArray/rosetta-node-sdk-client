@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockResponse model module.
  * @module model/BlockResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var BlockResponse = /*#__PURE__*/function () {
   /**

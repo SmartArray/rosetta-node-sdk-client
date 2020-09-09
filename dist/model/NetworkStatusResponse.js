@@ -11,6 +11,8 @@ var _BlockIdentifier = _interopRequireDefault(require("./BlockIdentifier"));
 
 var _Peer = _interopRequireDefault(require("./Peer"));
 
+var _SyncStatus = _interopRequireDefault(require("./SyncStatus"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,12 +24,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The NetworkStatusResponse model module.
  * @module model/NetworkStatusResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var NetworkStatusResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>NetworkStatusResponse</code>.
-   * NetworkStatusResponse contains basic information about the node&#39;s view of a blockchain network.
+   * NetworkStatusResponse contains basic information about the node&#39;s view of a blockchain network. It is assumed that any BlockIdentifier.Index less than or equal to CurrentBlockIdentifier.Index can be queried. If a Rosetta implementation prunes historical state, it should populate the optional &#x60;oldest_block_identifier&#x60; field with the oldest block available to query. If this is not populated, it is assumed that the &#x60;genesis_block_identifier&#x60; is the oldest queryable block. If a Rosetta implementation performs some pre-sync before it is possible to query blocks, sync_status should be populated so that clients can still monitor healthiness. Without this field, it may appear that the implementation is stuck syncing and needs to be terminated.
    * @alias module:model/NetworkStatusResponse
    * @param currentBlockIdentifier {module:model/BlockIdentifier} 
    * @param currentBlockTimestamp {Number} The timestamp of the block in milliseconds since the Unix Epoch. The timestamp is stored in milliseconds because some blockchains produce blocks more often than once a second.
@@ -80,6 +82,14 @@ var NetworkStatusResponse = /*#__PURE__*/function () {
           obj['genesis_block_identifier'] = _BlockIdentifier["default"].constructFromObject(data['genesis_block_identifier']);
         }
 
+        if (data.hasOwnProperty('oldest_block_identifier')) {
+          obj['oldest_block_identifier'] = _BlockIdentifier["default"].constructFromObject(data['oldest_block_identifier']);
+        }
+
+        if (data.hasOwnProperty('sync_status')) {
+          obj['sync_status'] = _SyncStatus["default"].constructFromObject(data['sync_status']);
+        }
+
         if (data.hasOwnProperty('peers')) {
           obj['peers'] = _ApiClient["default"].convertToType(data['peers'], [_Peer["default"]]);
         }
@@ -108,6 +118,16 @@ NetworkStatusResponse.prototype['current_block_timestamp'] = undefined;
  */
 
 NetworkStatusResponse.prototype['genesis_block_identifier'] = undefined;
+/**
+ * @member {module:model/BlockIdentifier} oldest_block_identifier
+ */
+
+NetworkStatusResponse.prototype['oldest_block_identifier'] = undefined;
+/**
+ * @member {module:model/SyncStatus} sync_status
+ */
+
+NetworkStatusResponse.prototype['sync_status'] = undefined;
 /**
  * @member {Array.<module:model/Peer>} peers
  */

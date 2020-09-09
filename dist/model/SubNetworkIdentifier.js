@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SubNetworkIdentifier model module.
  * @module model/SubNetworkIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var SubNetworkIdentifier = /*#__PURE__*/function () {
   /**

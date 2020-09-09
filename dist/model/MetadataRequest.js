@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MetadataRequest model module.
  * @module model/MetadataRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var MetadataRequest = /*#__PURE__*/function () {
   /**

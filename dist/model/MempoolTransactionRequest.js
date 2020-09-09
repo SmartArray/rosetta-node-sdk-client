@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MempoolTransactionRequest model module.
  * @module model/MempoolTransactionRequest
- * @version 1.3.1
+ * @version 1.4.1
  */
 var MempoolTransactionRequest = /*#__PURE__*/function () {
   /**

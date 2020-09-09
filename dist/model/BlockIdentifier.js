@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockIdentifier model module.
  * @module model/BlockIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var BlockIdentifier = /*#__PURE__*/function () {
   /**

@@ -22,12 +22,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Block model module.
  * @module model/Block
- * @version 1.3.1
+ * @version 1.4.1
  */
 var Block = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Block</code>.
-   * Blocks contain an array of Transactions that occurred at a particular BlockIdentifier.
+   * Blocks contain an array of Transactions that occurred at a particular BlockIdentifier. A hard requirement for blocks returned by Rosetta implementations is that they MUST be _inalterable_: once a client has requested and received a block identified by a specific BlockIndentifier, all future calls for that same BlockIdentifier must return the same block contents.
    * @alias module:model/Block
    * @param blockIdentifier {module:model/BlockIdentifier} 
    * @param parentBlockIdentifier {module:model/BlockIdentifier} 

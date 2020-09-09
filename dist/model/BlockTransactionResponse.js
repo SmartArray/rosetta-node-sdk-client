@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockTransactionResponse model module.
  * @module model/BlockTransactionResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var BlockTransactionResponse = /*#__PURE__*/function () {
   /**

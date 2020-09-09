@@ -75,6 +75,60 @@ Object.defineProperty(exports, "BlockTransactionResponse", {
     return _BlockTransactionResponse["default"];
   }
 });
+Object.defineProperty(exports, "Coin", {
+  enumerable: true,
+  get: function get() {
+    return _Coin["default"];
+  }
+});
+Object.defineProperty(exports, "CoinAction", {
+  enumerable: true,
+  get: function get() {
+    return _CoinAction["default"];
+  }
+});
+Object.defineProperty(exports, "CoinChange", {
+  enumerable: true,
+  get: function get() {
+    return _CoinChange["default"];
+  }
+});
+Object.defineProperty(exports, "CoinIdentifier", {
+  enumerable: true,
+  get: function get() {
+    return _CoinIdentifier["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionCombineRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionCombineRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionCombineResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionCombineResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionDeriveRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionDeriveRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionDeriveResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionDeriveResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionHashRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionHashRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ConstructionMetadataRequest", {
   enumerable: true,
   get: function get() {
@@ -87,16 +141,46 @@ Object.defineProperty(exports, "ConstructionMetadataResponse", {
     return _ConstructionMetadataResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConstructionParseRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionParseRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionParseResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionParseResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionPayloadsRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionPayloadsRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionPayloadsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionPayloadsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionPreprocessRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionPreprocessRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConstructionPreprocessResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConstructionPreprocessResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConstructionSubmitRequest", {
   enumerable: true,
   get: function get() {
     return _ConstructionSubmitRequest["default"];
-  }
-});
-Object.defineProperty(exports, "ConstructionSubmitResponse", {
-  enumerable: true,
-  get: function get() {
-    return _ConstructionSubmitResponse["default"];
   }
 });
 Object.defineProperty(exports, "Currency", {
@@ -105,16 +189,16 @@ Object.defineProperty(exports, "Currency", {
     return _Currency["default"];
   }
 });
+Object.defineProperty(exports, "CurveType", {
+  enumerable: true,
+  get: function get() {
+    return _CurveType["default"];
+  }
+});
 Object.defineProperty(exports, "Error", {
   enumerable: true,
   get: function get() {
     return _Error["default"];
-  }
-});
-Object.defineProperty(exports, "MempoolRequest", {
-  enumerable: true,
-  get: function get() {
-    return _MempoolRequest["default"];
   }
 });
 Object.defineProperty(exports, "MempoolResponse", {
@@ -201,6 +285,30 @@ Object.defineProperty(exports, "Peer", {
     return _Peer["default"];
   }
 });
+Object.defineProperty(exports, "PublicKey", {
+  enumerable: true,
+  get: function get() {
+    return _PublicKey["default"];
+  }
+});
+Object.defineProperty(exports, "Signature", {
+  enumerable: true,
+  get: function get() {
+    return _Signature["default"];
+  }
+});
+Object.defineProperty(exports, "SignatureType", {
+  enumerable: true,
+  get: function get() {
+    return _SignatureType["default"];
+  }
+});
+Object.defineProperty(exports, "SigningPayload", {
+  enumerable: true,
+  get: function get() {
+    return _SigningPayload["default"];
+  }
+});
 Object.defineProperty(exports, "SubAccountIdentifier", {
   enumerable: true,
   get: function get() {
@@ -213,6 +321,12 @@ Object.defineProperty(exports, "SubNetworkIdentifier", {
     return _SubNetworkIdentifier["default"];
   }
 });
+Object.defineProperty(exports, "SyncStatus", {
+  enumerable: true,
+  get: function get() {
+    return _SyncStatus["default"];
+  }
+});
 Object.defineProperty(exports, "Transaction", {
   enumerable: true,
   get: function get() {
@@ -223,6 +337,12 @@ Object.defineProperty(exports, "TransactionIdentifier", {
   enumerable: true,
   get: function get() {
     return _TransactionIdentifier["default"];
+  }
+});
+Object.defineProperty(exports, "TransactionIdentifierResponse", {
+  enumerable: true,
+  get: function get() {
+    return _TransactionIdentifierResponse["default"];
   }
 });
 Object.defineProperty(exports, "Version", {
@@ -292,19 +412,47 @@ var _BlockTransactionRequest = _interopRequireDefault(require("./model/BlockTran
 
 var _BlockTransactionResponse = _interopRequireDefault(require("./model/BlockTransactionResponse"));
 
+var _Coin = _interopRequireDefault(require("./model/Coin"));
+
+var _CoinAction = _interopRequireDefault(require("./model/CoinAction"));
+
+var _CoinChange = _interopRequireDefault(require("./model/CoinChange"));
+
+var _CoinIdentifier = _interopRequireDefault(require("./model/CoinIdentifier"));
+
+var _ConstructionCombineRequest = _interopRequireDefault(require("./model/ConstructionCombineRequest"));
+
+var _ConstructionCombineResponse = _interopRequireDefault(require("./model/ConstructionCombineResponse"));
+
+var _ConstructionDeriveRequest = _interopRequireDefault(require("./model/ConstructionDeriveRequest"));
+
+var _ConstructionDeriveResponse = _interopRequireDefault(require("./model/ConstructionDeriveResponse"));
+
+var _ConstructionHashRequest = _interopRequireDefault(require("./model/ConstructionHashRequest"));
+
 var _ConstructionMetadataRequest = _interopRequireDefault(require("./model/ConstructionMetadataRequest"));
 
 var _ConstructionMetadataResponse = _interopRequireDefault(require("./model/ConstructionMetadataResponse"));
 
-var _ConstructionSubmitRequest = _interopRequireDefault(require("./model/ConstructionSubmitRequest"));
+var _ConstructionParseRequest = _interopRequireDefault(require("./model/ConstructionParseRequest"));
 
-var _ConstructionSubmitResponse = _interopRequireDefault(require("./model/ConstructionSubmitResponse"));
+var _ConstructionParseResponse = _interopRequireDefault(require("./model/ConstructionParseResponse"));
+
+var _ConstructionPayloadsRequest = _interopRequireDefault(require("./model/ConstructionPayloadsRequest"));
+
+var _ConstructionPayloadsResponse = _interopRequireDefault(require("./model/ConstructionPayloadsResponse"));
+
+var _ConstructionPreprocessRequest = _interopRequireDefault(require("./model/ConstructionPreprocessRequest"));
+
+var _ConstructionPreprocessResponse = _interopRequireDefault(require("./model/ConstructionPreprocessResponse"));
+
+var _ConstructionSubmitRequest = _interopRequireDefault(require("./model/ConstructionSubmitRequest"));
 
 var _Currency = _interopRequireDefault(require("./model/Currency"));
 
-var _Error = _interopRequireDefault(require("./model/Error"));
+var _CurveType = _interopRequireDefault(require("./model/CurveType"));
 
-var _MempoolRequest = _interopRequireDefault(require("./model/MempoolRequest"));
+var _Error = _interopRequireDefault(require("./model/Error"));
 
 var _MempoolResponse = _interopRequireDefault(require("./model/MempoolResponse"));
 
@@ -334,13 +482,25 @@ var _PartialBlockIdentifier = _interopRequireDefault(require("./model/PartialBlo
 
 var _Peer = _interopRequireDefault(require("./model/Peer"));
 
+var _PublicKey = _interopRequireDefault(require("./model/PublicKey"));
+
+var _Signature = _interopRequireDefault(require("./model/Signature"));
+
+var _SignatureType = _interopRequireDefault(require("./model/SignatureType"));
+
+var _SigningPayload = _interopRequireDefault(require("./model/SigningPayload"));
+
 var _SubAccountIdentifier = _interopRequireDefault(require("./model/SubAccountIdentifier"));
 
 var _SubNetworkIdentifier = _interopRequireDefault(require("./model/SubNetworkIdentifier"));
 
+var _SyncStatus = _interopRequireDefault(require("./model/SyncStatus"));
+
 var _Transaction = _interopRequireDefault(require("./model/Transaction"));
 
 var _TransactionIdentifier = _interopRequireDefault(require("./model/TransactionIdentifier"));
+
+var _TransactionIdentifierResponse = _interopRequireDefault(require("./model/TransactionIdentifierResponse"));
 
 var _Version = _interopRequireDefault(require("./model/Version"));
 

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MempoolTransactionResponse model module.
  * @module model/MempoolTransactionResponse
- * @version 1.3.1
+ * @version 1.4.1
  */
 var MempoolTransactionResponse = /*#__PURE__*/function () {
   /**

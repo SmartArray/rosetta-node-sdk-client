@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SubAccountIdentifier model module.
  * @module model/SubAccountIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var SubAccountIdentifier = /*#__PURE__*/function () {
   /**
@@ -81,7 +81,7 @@ var SubAccountIdentifier = /*#__PURE__*/function () {
 
 SubAccountIdentifier.prototype['address'] = undefined;
 /**
- * If the SubAccount address is not sufficient to uniquely specify a SubAccount, any other identifying information can be stored here.  It is important to note that two SubAccounts with identical addresses but differing metadata will not be considered equal by clients.
+ * If the SubAccount address is not sufficient to uniquely specify a SubAccount, any other identifying information can be stored here. It is important to note that two SubAccounts with identical addresses but differing metadata will not be considered equal by clients.
  * @member {Object} metadata
  */
 

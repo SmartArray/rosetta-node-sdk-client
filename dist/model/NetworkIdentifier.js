@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The NetworkIdentifier model module.
  * @module model/NetworkIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var NetworkIdentifier = /*#__PURE__*/function () {
   /**

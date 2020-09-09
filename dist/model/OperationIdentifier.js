@@ -18,14 +18,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OperationIdentifier model module.
  * @module model/OperationIdentifier
- * @version 1.3.1
+ * @version 1.4.1
  */
 var OperationIdentifier = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OperationIdentifier</code>.
    * The operation_identifier uniquely identifies an operation within a transaction.
    * @alias module:model/OperationIdentifier
-   * @param index {Number} The operation index is used to ensure each operation has a unique identifier within a transaction.  To clarify, there may not be any notion of an operation index in the blockchain being described.
+   * @param index {Number} The operation index is used to ensure each operation has a unique identifier within a transaction. This index is only relative to the transaction and NOT GLOBAL. The operations in each transaction should start from index 0. To clarify, there may not be any notion of an operation index in the blockchain being described.
    */
   function OperationIdentifier(index) {
     _classCallCheck(this, OperationIdentifier);
@@ -74,14 +74,14 @@ var OperationIdentifier = /*#__PURE__*/function () {
   return OperationIdentifier;
 }();
 /**
- * The operation index is used to ensure each operation has a unique identifier within a transaction.  To clarify, there may not be any notion of an operation index in the blockchain being described.
+ * The operation index is used to ensure each operation has a unique identifier within a transaction. This index is only relative to the transaction and NOT GLOBAL. The operations in each transaction should start from index 0. To clarify, there may not be any notion of an operation index in the blockchain being described.
  * @member {Number} index
  */
 
 
 OperationIdentifier.prototype['index'] = undefined;
 /**
- * Some blockchains specify an operation index that is essential for client use. For example, Bitcoin uses a network_index to identify which UTXO was used in a transaction.  network_index should not be populated if there is no notion of an operation index in a blockchain (typically most account-based blockchains).
+ * Some blockchains specify an operation index that is essential for client use. For example, Bitcoin uses a network_index to identify which UTXO was used in a transaction. network_index should not be populated if there is no notion of an operation index in a blockchain (typically most account-based blockchains).
  * @member {Number} network_index
  */
 
